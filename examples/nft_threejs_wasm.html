@@ -80,17 +80,17 @@ html,body {
       		// torus.position.z = 0.5;
       		// torus.rotation.x = Math.PI/2;
 			var cube = new THREE.Mesh( 
-				new THREE.BoxGeometry( 1, 1, 1 ),
+				new THREE.BoxGeometry( 1, 1, 0.01 ),
 				new THREE.MeshBasicMaterial( {color: 0x00ff00} )
 			);
 			cube.material.flatShading;
-      		cube.position.z = 100;
+      		cube.position.z = 40;
       		cube.position.x = 80;
       		cube.position.y = 80;
       		cube.scale.set(80,80,80);
 			
 
-      		arController.loadNFTMarker('DataNFT/pinball', function(markerId) {
+      		arController.loadNFTMarker('DataNFT/deporteur', function(markerId) {
       			var markerRoot = arController.createThreeNFTMarker(markerId);
       			markerRoot.add(cube);
       			arScene.scene.add(markerRoot);
