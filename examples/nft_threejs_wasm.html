@@ -105,9 +105,9 @@ html,body {
       		var tick = function() {
       			arScene.process();
 
-      			rotationV += (rotationTarget - sphere.rotation.z) * 0.05;
-      			sphere.rotation.z += rotationV;
-      			torus.rotation.y += rotationV;
+      			rotationV += (rotationTarget - cube.rotation.z) * 0.05;
+      			cube.rotation.z += rotationV;
+      			//torus.rotation.y += rotationV;
       			rotationV *= 0.8;
 
       			arScene.renderOn(renderer);
