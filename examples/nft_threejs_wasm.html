@@ -89,19 +89,15 @@ html,body {
       		cube.position.y = 80;
       		cube.scale.set(80,80,80);
 
-	      	var torus = new THREE.Mesh(
-      		new THREE.TorusGeometry(0.3, 0.2, 8, 8),
-      		new THREE.MeshNormalMaterial()
-      		);
-      		torus.material.shading = THREE.FlatShading;
-      		torus.position.z = 0.5;
-      		torus.rotation.x = Math.PI/2;
+			var geometry = new THREE.ConeGeometry( 5, 2, 16 );
+			var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+			var cone = new THREE.Mesh( geometry, material );
 			
 
       		arController.loadNFTMarker('DataNFT/pinball', function(markerId) {
       			var markerRoot = arController.createThreeNFTMarker(markerId);
       			markerRoot.add(cube);
-				markerRoot.add(torus);
+				markerRoot.add(cone);
       			arScene.scene.add(markerRoot);
       		});
 
