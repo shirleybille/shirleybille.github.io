@@ -92,6 +92,10 @@ html,body {
 			var geometry = new THREE.ConeGeometry( 5, 2, 16 );
 			var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
 			var cone = new THREE.Mesh( geometry, material );
+			cone.position.z = 0;
+			cone.position.x = 10;
+			cone.position.y = 5; 
+			cone.scale.set(50,50,50);
 			
 
       		arController.loadNFTMarker('DataNFT/pinball', function(markerId) {
