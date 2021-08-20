@@ -97,10 +97,10 @@ html,body {
       		var tick = function() {
       			arScene.process();
 
-      			rotationV += (rotationTarget - cube.rotation.z) * 0.05;
-      			cube.rotation.z += rotationV;
-      			//torus.rotation.y += rotationV;
-      			rotationV *= 0.8;
+      			// rotationV += (rotationTarget - cube.rotation.z) * 0.05;
+      			// cube.rotation.z += rotationV;
+      			// //torus.rotation.y += rotationV;
+      			// rotationV *= 0.8;
 
       			arScene.renderOn(renderer);
       			requestAnimationFrame(tick);
