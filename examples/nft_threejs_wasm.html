@@ -82,17 +82,17 @@ html,body {
 			
 			
 
-      		arController.loadNFTMarker('DataNFT/targetone', function(markerId) {
-      			var markerRoot = arController.createThreeNFTMarker(markerId);
-      			markerRoot.add(sphere);
-      			arScene.scene.add(markerRoot);
-      		});
-
-      		// arController.loadMarker('Data/patt.kanji', function(markerId) {
-      		// 	var markerRoot = arController.createThreeMarker(markerId);
-      		// 	markerRoot.add(torus);
+      		// arController.loadNFTMarker('DataNFT/targetone', function(markerId) {
+      		// 	var markerRoot = arController.createThreeNFTMarker(markerId);
+      		// 	markerRoot.add(sphere);
       		// 	arScene.scene.add(markerRoot);
       		// });
+
+      		arController.loadMarker('Data/pattern-cible1.patt', function(markerId) {
+      			var markerRoot = arController.createThreeMarker(markerId);
+      			markerRoot.add(torus);
+      			arScene.scene.add(markerRoot);
+      		});
 
       		var tick = function() {
       			arScene.process();
